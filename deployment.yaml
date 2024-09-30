@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hellopyhton-app
-          image: yanuarakhid/hellopython:v2
+          image: yanuarakhid/hellopython:v3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
