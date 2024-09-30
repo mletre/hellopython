@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellopyhton-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellopyhton-app
+  template:
+    metadata:
+      labels:
+        app: hellopyhton-app
+    spec:
+      containers:
+        - name: hellopyhton-app
+          image: yanuarakhid/hellopython:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
